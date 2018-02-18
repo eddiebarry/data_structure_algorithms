@@ -36,7 +36,7 @@ public:
     
     ~stack(){
         while(top!=NULL){
-            cout<<"destructor is running\n";
+            //cout<<"destructor is running\n";
             node* temp = top;
             top = top->tail;
             delete temp;
@@ -58,12 +58,17 @@ public:
     }
     
     stack_dt peek(){
-        return top->data;
+        if(top!=NULL){
+            return top->data;
+        }
+        else{
+            return 0;
+        }
     }
     
     void pop(){
         //cout<<top<<"\n";
-        if(!empty()){
+        if(top!=NULL){
             node* temp = top;
             top = top->tail;
             delete temp;
@@ -96,6 +101,7 @@ int main(){
     stack stk;
     cout<<stk.empty()<<"\n";
     stk.push(100);
+    stk.pop();
     cout<<stk.peek()<<"\n";
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
@@ -105,17 +111,19 @@ int main(){
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
     stk.display();
-    stk.pop();
-    cout<<stk.peek()<<"\n";
-    cout<<stk.size()<<"\n";
-    cout<<stk.empty()<<"\n";
-    stk.display();
-    stk.pop();
-    cout<<stk.peek()<<"\n";
-    cout<<stk.size()<<"\n";
-    cout<<stk.empty()<<"\n";
-    stk.display();
-    stk.pop();
+//    stk.pop();
+//    cout<<stk.peek()<<"\n";
+//    cout<<stk.size()<<"\n";
+//    cout<<stk.empty()<<"\n";
+//    stk.display();
+//    stk.pop();
+//    cout<<stk.peek()<<"\n";
+//    cout<<stk.size()<<"\n";
+//    cout<<stk.empty()<<"\n";
+//    stk.display();
+//    stk.pop();
+    
+    return 0;
 }
 
 
