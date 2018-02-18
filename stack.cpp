@@ -98,19 +98,19 @@ public:
 };
 
 int main(){
-    stack stk;
-    cout<<stk.empty()<<"\n";
-    stk.push(100);
-    stk.pop();
-    cout<<stk.peek()<<"\n";
-    cout<<stk.size()<<"\n";
-    cout<<stk.empty()<<"\n";
-    stk.display();
-    stk.push(1000);
-    cout<<stk.peek()<<"\n";
-    cout<<stk.size()<<"\n";
-    cout<<stk.empty()<<"\n";
-    stk.display();
+//    stack stk;
+//    cout<<stk.empty()<<"\n";
+//    stk.push(100);
+//    stk.pop();
+//    cout<<stk.peek()<<"\n";
+//    cout<<stk.size()<<"\n";
+//    cout<<stk.empty()<<"\n";
+//    stk.display();
+//    stk.push(1000);
+//    cout<<stk.peek()<<"\n";
+//    cout<<stk.size()<<"\n";
+//    cout<<stk.empty()<<"\n";
+//    stk.display();
 //    stk.pop();
 //    cout<<stk.peek()<<"\n";
 //    cout<<stk.size()<<"\n";
