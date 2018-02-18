@@ -31,6 +31,7 @@ public:
     
     stack(){
         top = NULL;
+        //cout<<top;
     }
     
     ~stack(){
@@ -43,16 +44,16 @@ public:
     }
     
     bool empty(){
-        return top = NULL;
+        return top == NULL;
     }
     
     void push(stack_dt val){
         node* new_node = new node;
         new_node->data = val;
-        new_node->tail = NULL;
-        if(top!=NULL){
-            new_node->tail = top;
-        }
+        new_node->tail = top;
+//        if(top!=NULL){
+//            new_node->tail = top;
+//        }
         top = new_node;
     }
     
@@ -61,14 +62,17 @@ public:
     }
     
     void pop(){
-        node* temp = top;
-        top = top->tail;
-        delete temp;
+        //cout<<top<<"\n";
+        if(!empty()){
+            node* temp = top;
+            top = top->tail;
+            delete temp;
+        }
     }
     
     void display(){
         node* temp = top;
-        while(temp->tail!=NULL){
+        while(temp!=NULL){
             cout<<temp->data<<" --> ";
             temp = temp->tail;
         }
@@ -79,7 +83,7 @@ public:
         unsigned long size = 0;
         node* temp = new node;
         temp = top;
-        while(temp->tail!=NULL){
+        while(temp!=NULL){
             size++;
             temp=temp->tail;
         }
@@ -95,22 +99,22 @@ int main(){
     cout<<stk.peek()<<"\n";
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
-    //stk.display();
+    stk.display();
     stk.push(1000);
     cout<<stk.peek()<<"\n";
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
-    //stk.display();
+    stk.display();
     stk.pop();
     cout<<stk.peek()<<"\n";
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
-    //stk.display();
+    stk.display();
     stk.pop();
     cout<<stk.peek()<<"\n";
     cout<<stk.size()<<"\n";
     cout<<stk.empty()<<"\n";
-    //stk.display();
+    stk.display();
     stk.pop();
 }
 
