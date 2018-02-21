@@ -6,24 +6,20 @@
 //  O(n) display
 //  usefull for LIFO ops
 //
-// int can be changed to any type to make it versatile
+//  update stack_dt with needed data type
 #include <iostream>
 #define stack_dt int
 
 using namespace std;
 
-/**
-    define a node with stack_data_type as data and a tail pointer
-**/
+
+//define a node with stack_data_type as data and a tail pointer
 struct node{
     stack_dt data;
     node* tail;
 };
 
-/**
-    the class will contain a pointer to the top
-**/
-
+//the class will contain a pointer to the top
 class stack{
 private:
     struct node* top;
@@ -36,9 +32,10 @@ public:
     
     ~stack(){
         while(top!=NULL){
-            //cout<<"destructor is running\n";
             node* temp = top;
             top = top->tail;
+            delete temp->data;
+            delete temp->tail;
             delete temp;
         }
     }
@@ -51,9 +48,6 @@ public:
         node* new_node = new node;
         new_node->data = val;
         new_node->tail = top;
-//        if(top!=NULL){
-//            new_node->tail = top;
-//        }
         top = new_node;
     }
     
@@ -67,14 +61,16 @@ public:
     }
     
     void pop(){
-        //cout<<top<<"\n";
         if(top!=NULL){
             node* temp = top;
             top = top->tail;
+            delete temp->data;
+            delete temp->tail;
             delete temp;
         }
     }
     
+    //Prints the entire linked list out
     void display(){
         node* temp = top;
         while(temp!=NULL){
@@ -83,7 +79,7 @@ public:
         }
         cout<<"\n";
     }
-    
+
     unsigned long size(){
         unsigned long size = 0;
         node* temp = new node;
