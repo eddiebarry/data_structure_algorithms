@@ -34,8 +34,6 @@ public:
         while(top!=NULL){
             node* temp = top;
             top = top->tail;
-            delete temp->data;
-            delete temp->tail;
             delete temp;
         }
     }
