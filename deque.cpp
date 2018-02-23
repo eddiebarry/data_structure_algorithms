@@ -111,40 +111,40 @@ public:
 
 
 int main(){
-    deque de;
-    int t = 20;
-    int x = 0;
-    srand(1);
-    while(t--){
-        x++;
-        
-        cout<<x<<"\n";
-        //int x = rand();
-        if(x%10==1){
-            de.push_back(x);
-        }
-        else if(x%10==2){
-            de.push_front(x);
-        }
-        else if(x%10==3){
-            de.pop_front();
-        }
-        else if(x%10==4){
-            de.pop_back();
-        }
-        else if(x%10==5){
-            cout<<de.front()<<"\n";
-        }
-        else if(x%10==6){
-            cout<<de.back()<<"\n";
-        }
-        else{
-            de.push_back(x);
-        }
-        de.display();
-        cout<<"\n";
-    }
-    de.push_back(100);
-    de.display();
+//    deque de;
+//    int t = 20;
+//    int x = 0;
+//    srand(1);
+//    while(t--){
+//        x++;
+//        
+//        cout<<x<<"\n";
+//        //int x = rand();
+//        if(x%10==1){
+//            de.push_back(x);
+//        }
+//        else if(x%10==2){
+//            de.push_front(x);
+//        }
+//        else if(x%10==3){
+//            de.pop_front();
+//        }
+//        else if(x%10==4){
+//            de.pop_back();
+//        }
+//        else if(x%10==5){
+//            cout<<de.front()<<"\n";
+//        }
+//        else if(x%10==6){
+//            cout<<de.back()<<"\n";
+//        }
+//        else{
+//            de.push_back(x);
+//        }
+//        de.display();
+//        cout<<"\n";
+//    }
+//    de.push_back(100);
+//    de.display();
     return 0;
 }
