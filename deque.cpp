@@ -72,6 +72,9 @@ public:
             delete temp;
             size--;
         }
+        if(size==0){
+            bottom = NULL;
+        }
     }
     void pop_back(){
         if(bottom!=NULL){
@@ -83,13 +86,16 @@ public:
             delete temp;
             size--;
         }
+        if(size==0){
+            top = NULL;
+        }
     }
     deque_dt front(){
-        deque_dt x;
+        deque_dt x= 0;
         return top==NULL? x : top->key;
     }
     deque_dt back(){
-        deque_dt x;
+        deque_dt x = 0;
         return bottom==NULL? x: bottom->key;
     }
     void display(){
@@ -106,7 +112,7 @@ public:
 
 int main(){
     deque de;
-    int t = 200;
+    int t = 20;
     int x = 0;
     srand(1);
     while(t--){
@@ -125,10 +131,6 @@ int main(){
         }
         else if(x%10==4){
             de.pop_back();
-            
-            cout<<de.front()<<"\n";
-            
-            cout<<de.back()<<"\n";
         }
         else if(x%10==5){
             cout<<de.front()<<"\n";
