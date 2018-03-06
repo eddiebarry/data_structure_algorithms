@@ -81,15 +81,16 @@ private:
 
 
 int main(){
-    vector<long long> mem;
-    REP(i,11){
-        mem.push_back(i);
-    }
-    BIT bit(mem);
-    cout<<bit.point_query(1);
-    cout<<bit.prefix_query(9);
-    bit.update(1,11);
-    
-    cout<<bit.point_query(1);
-    cout<<bit.prefix_query(9);
+//    vector<long long> mem;
+//    REP(i,11){
+//        mem.push_back(i);
+//    }
+//    BIT bit(mem);
+//    cout<<bit.point_query(1);
+//    cout<<bit.prefix_query(9);
+//    bit.update(1,11);
+//
+//    cout<<bit.point_query(1);
+//    cout<<bit.prefix_query(9);
+return 0;
 }
